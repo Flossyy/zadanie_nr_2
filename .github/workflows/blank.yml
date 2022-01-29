@@ -23,9 +23,13 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-      - name: Run Buildx
-        run: |
-          docker buildx build \
-            --platform linux/386,linux/amd64,linux/arm/v6 \
-            --output "type=image,push=false" \
-            --file ./test/Dockerfile.v1
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: ./
+          file: ./dockerfile.v1
+          platforms: linux/amd64,linux/arm64,linux/ppc64le
+          push: true
+          tags: |
+              flossyy/tester:tagname
