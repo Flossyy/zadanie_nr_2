@@ -38,7 +38,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/ppc64le
           target: compile-one
           push: true
-          tags: flossyy/tester:tagname
+          tags: flossyy/tester:tagname-one
           cache-from: type=registry,ref=flossyy/tester:tagname-one
           cache-to: type=inline
   
@@ -51,6 +51,6 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/ppc64le
           target: compile-one
           push: true
-          tags: flossyy/tester:tagname
+          tags: flossyy/tester:tagname-two
           cache-from: type=registry,ref=flossyy/tester:tagname-two
           cache-to: type=inline
