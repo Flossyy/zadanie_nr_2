@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-push-images:
+  build-push-image-one:
     name: compile-one
     runs-on: ubuntu-latest
 
@@ -41,8 +41,10 @@ jobs:
           tags: flossyy/tester:tagname-one
           cache-from: type=registry,ref=flossyy/tester:tagname-one
           cache-to: type=inline
-    
-    name: compile-two
+
+
+  build-push-image-two:
+    name: compile-one
     runs-on: ubuntu-latest
 
     steps:
