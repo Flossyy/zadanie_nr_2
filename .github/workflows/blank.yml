@@ -44,7 +44,7 @@ jobs:
 
 
   build-push-image-two:
-    name: compile-one
+    name: compile-two
     runs-on: ubuntu-latest
 
     steps:
