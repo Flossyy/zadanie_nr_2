@@ -31,4 +31,4 @@ jobs:
           file: ./dockerfile.v1
           push: true
           tags: |
-              Flosssyy/tester:tagname
+              flosssyy/tester:tagname
