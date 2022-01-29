@@ -40,7 +40,7 @@ jobs:
           push: true
           tags: flossyy/tester:tagname
           cache-from: type=registry,ref=flossyy/tester:tagname-one
-          cache-to: type=inline-one
+          cache-to: type=inline
 
       - name: Build and push compile-two
         id: docker_build_two
@@ -53,4 +53,4 @@ jobs:
           push: true
           tags: flossyy/tester:tagname
           cache-from: type=registry,ref=flossyy/tester:tagname-two
-          cache-to: type=inline-two
+          cache-to: type=inline
