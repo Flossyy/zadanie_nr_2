@@ -37,5 +37,6 @@ jobs:
           file: ./dockerfile.v1
           platforms: linux/amd64,linux/arm64,linux/ppc64le
           push: true
-          tags: |
-              flossyy/tester:tagname
+          tags: flossyy/tester:tagname
+          cache-from: type=registry,ref=flossyy/tester:tagname
+          cache-to: type=inline
