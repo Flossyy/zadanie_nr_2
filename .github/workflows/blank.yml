@@ -36,6 +36,7 @@ jobs:
           context: ./
           file: ./Dockerfile.zad2
           platforms: linux/amd64,linux/arm64,linux/ppc64le
+          target: compile-one
           push: true
           tags: flossyy/tester:tagname
           cache-from: type=registry,ref=flossyy/tester:tagname
